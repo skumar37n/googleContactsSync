@@ -1,0 +1,21 @@
+<template>
+    <template if:true={googleContact}>
+        <lightning-layout vertical-align="center">
+            <!--<lightning-layout-item>
+                <img src={contact.Picture__c} alt="Profile photo" />
+            </lightning-layout-item>-->
+            <lightning-layout-item padding="around-small">
+                <p><b>Name : </b> {googleContact.name}</p>
+                <p><b>Email : </b> {googleContact.email}</p>
+                <p><b>Phone : </b> {googleContact.phone}</p>
+                <p><b>Company : </b> {googleContact.company}</p>
+                <p><b>Position : </b> {googleContact.position}</p>
+                <p>
+                    <lightning-formatted-phone
+                        value={googleContact.Phone}
+                    ></lightning-formatted-phone>
+                </p>
+            </lightning-layout-item>
+        </lightning-layout>
+    </template>
+</template>
